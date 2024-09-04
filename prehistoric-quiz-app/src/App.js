@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Quiz from './components/Quiz';
+import Result from './components/Result';
 
-function App() {
+const App = () => {
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [quizFinished, setQuizFinished] = useState(false);
+
+  const startQuiz = () => {
+    setQuizStarted(true);
+    setQuizFinished(false);
+  };
+
+  const finishQuiz = () => {
+    setQuizFinished(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Prehistoric Quiz App</h1>
+      {!quizStarted && !quizFinished && (
+        <button onClick={startQuiz}>Start Quiz</button>
+      )}
+      {quizStarted && !quizFinished && (
+        <Quiz finishQuiz={finishQuiz} />
+      )}
+      {quizFinished && (
+        <Result />
+      )}
     </div>
   );
-}
+};
 
 export default App;
