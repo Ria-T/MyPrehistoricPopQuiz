@@ -28,15 +28,22 @@ const Quiz = ({ finishQuiz }) => {
   };
 
   const handleSubmit = () => {
+    // Debugging: Log current values
+    console.log(`Selected Option: ${selectedOption}`);
+    console.log(`Correct Answer: ${questions[currentQuestionIndex].answer}`);
+    
     if (selectedOption === questions[currentQuestionIndex].answer) {
-      setScore(score + 1);
+      setScore(score + 1); // Increment score if the answer is correct
     }
+    
+    // Debugging: Log updated score
+    console.log(`Current Score: ${score + (selectedOption === questions[currentQuestionIndex].answer ? 1 : 0)}`);
 
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setSelectedOption('');
+      setSelectedOption(''); // Clear selected option for the next question
     } else {
-      finishQuiz(score); // Pass the score to finishQuiz
+      finishQuiz(score + (selectedOption === questions[currentQuestionIndex].answer ? 1 : 0)); // Pass the final score to the parent component
     }
   };
 
