@@ -10,12 +10,19 @@ const App = () => {
   const startQuiz = () => {
     setQuizStarted(true);
     setQuizFinished(false);
+    setScore(0); // Reset the score
   };
 
   const finishQuiz = (finalScore) => {
     setScore(finalScore);
     setQuizStarted(false);
     setQuizFinished(true);
+  };
+
+  const restartQuiz = () => {
+    setQuizStarted(false);
+    setQuizFinished(false);
+    startQuiz(); // Optionally call startQuiz to reset state
   };
 
   return (
@@ -28,7 +35,7 @@ const App = () => {
         <Quiz finishQuiz={finishQuiz} />
       )}
       {quizFinished && (
-        <Result score={score} />
+        <Result score={score} restartQuiz={restartQuiz} />
       )}
     </div>
   );
