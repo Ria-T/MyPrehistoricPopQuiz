@@ -2,19 +2,54 @@ import React, { useState } from 'react';
 
 const questions = [
   {
-    question: 'Which dinosaur was the largest?',
-    options: ['Tyrannosaurus Rex', 'Brachiosaurus', 'Stegosaurus'],
-    answer: 'Brachiosaurus',
+    question: 'Which of the following dinosaurs was the largest?',
+    options: ['Tyrannosaurus Rex.', 'Brachiosaurus.', 'Stegosaurus.'],
+    answer: 'Brachiosaurus.',
   },
   {
-    question: 'What era did dinosaurs live in?',
-    options: ['Mesozoic Era', 'Cenozoic Era', 'Paleozoic Era'],
-    answer: 'Mesozoic Era',
+    question: 'What era is known as "The Age of Dinosaurs"?',
+    options: ['Mesozoic Era.', 'Cenozoic Era.', 'Paleozoic Era.'],
+    answer: 'Mesozoic Era.',
   },
   {
     question: 'Which dinosaur had a large frill on its neck?',
-    options: ['Triceratops', 'Velociraptor', 'Ankylosaurus'],
-    answer: 'Triceratops',
+    options: ['Triceratops.', 'Velociraptor.', 'Ankylosaurus.'],
+    answer: 'Triceratops.',
+  },
+  {
+    question: 'What was the largest known prehistoric shark?',
+    options: ['Dunkleosteus.', 'Liopleurodon.', 'Megalodon.'],
+    answer: 'Megalodon.',
+  },
+  {
+    question: 'Which prehistoric bird had a wingspan of up to 40 feet and is considered one of the largest flying creatures ever?',
+    options: ['Argentavis.', 'Quetzalcoatlus.', 'Pteranodon.'],
+    answer: 'Quetzalcoatlus.',
+  },
+  {
+    question: 'What process turns organic material into stone, preserving it as a fossil?',
+    options: ['Calcification.', 'Weathering.', 'Petrification.'],
+    answer: 'Petrification.',
+  },
+  {
+    question: 'Which was the largest carnivorous dinosaur?',
+    options: ['Spinosaurus.', 'Tyrannosaurus Rex.', 'Giganotosaurus.'],
+    answer: 'Spinosaurus.',
+  },
+  {
+    question: 'Which extinction event is known as "The Great Dying", where up to 96% of marine species went extinct?',
+    options: ['The Ordovician-Silurian Extinction Event.', 'The Permian-Triassic Extinction Event.', 'The Cretaceous-Paleogene Extinction Event.'],
+    answer: 'The Permian-Triassic Extinction Event.',
+  },
+  {
+    question: 'What event is believed to have caused the extinction of the dinosaurs?',
+    options: ['The impact of a large asteroid or comet.', 'A global ice age.', 'A gamma-ray burst.'],
+    answer: 'The impact of a large asteroid or comet.',
+  },
+  {
+    question: 'What is the name of the large prehistoric saber-toothed cat?',
+    options: ['Machairodus.', 'Thylacosmilus.', 'Smilodon.'],
+    answer: 'Smilodon.',
   },
 ];
 
