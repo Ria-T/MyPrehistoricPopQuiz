@@ -12,6 +12,7 @@ const App = () => {
   };
 
   const finishQuiz = () => {
+    setQuizStarted(false);
     setQuizFinished(true);
   };
 

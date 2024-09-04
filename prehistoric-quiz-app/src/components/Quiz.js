@@ -36,7 +36,8 @@ const Quiz = ({ finishQuiz }) => {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedOption('');
     } else {
-      finishQuiz();
+      console.log('Quiz finished'); // Debugging  
+      finishQuiz(); // Call finishQuiz function when the quiz is completed
     }
   };
 
