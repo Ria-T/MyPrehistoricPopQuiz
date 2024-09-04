@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .App {
+    background-color: #1e1e1e; /* Slightly lighter dark background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+  }
+  
+  /* Headings */
+  h1, h2 {
+    color: #ffffff; /* White text for headings */
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  
+  /* Quiz Container */
+  .quiz-container, .result-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Quiz Question */
+  .quiz-question {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  /* Options */
+  .option {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  label {
+    cursor: pointer;
+    font-size: 16px;
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #4CAF50; /* Darker green button */
+    color: #ffffff; /* White text on button */
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 50%; /* Set a specific width */
+    max-width: 200px; /* Add a maximum width */
+    margin-left: auto;  /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+  }
+  
+  button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+  }
+  
+  button:focus {
+    outline: 2px solid #4CAF50;
+    outline-offset: 4px;
+  }
+  
+  button:disabled {
+    background-color: #555555; /* Greyed out button when disabled */
+    cursor: not-allowed;
+  }
+  
+  /* Result Section */
+  .result {
+    text-align: center;
+  }
+  
+  .result p {
+    font-size: 18px;
+    color: #e0e0e0; /* Light text color */
+  }
+  
+  @media (max-width: 600px) {
+    .App {
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px;
+      width: 100%; /* Ensure buttons are full width on smaller screens */
+      max-width: none;
+    }
+  
+    label {
+      font-size: 14px;
+    }
+  }
+  

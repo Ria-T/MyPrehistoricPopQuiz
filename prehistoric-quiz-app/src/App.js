@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles.css';  
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 
@@ -27,7 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Prehistoric Quiz App</h1>
+      <h1>My Prehistoric Pop Quiz</h1>
       {!quizStarted && !quizFinished && (
         <button onClick={startQuiz}>Start Quiz</button>
       )}
