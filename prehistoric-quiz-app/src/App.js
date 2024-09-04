@@ -5,13 +5,15 @@ import Result from './components/Result';
 const App = () => {
   const [quizStarted, setQuizStarted] = useState(false);
   const [quizFinished, setQuizFinished] = useState(false);
+  const [score, setScore] = useState(0);
 
   const startQuiz = () => {
     setQuizStarted(true);
     setQuizFinished(false);
   };
 
-  const finishQuiz = () => {
+  const finishQuiz = (finalScore) => {
+    setScore(finalScore);
     setQuizStarted(false);
     setQuizFinished(true);
   };
@@ -26,7 +28,7 @@ const App = () => {
         <Quiz finishQuiz={finishQuiz} />
       )}
       {quizFinished && (
-        <Result />
+        <Result score={score} />
       )}
     </div>
   );

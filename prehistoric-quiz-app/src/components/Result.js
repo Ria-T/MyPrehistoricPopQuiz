@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Result = () => {
+const Result = ({ score }) => {
   return (
     <div>
       <h2>Quiz Completed!</h2>
-      <p>Your score will be displayed here.</p>
+      <p>Your score is: {score}</p>
     </div>
   );
 };
